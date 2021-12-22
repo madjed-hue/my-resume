@@ -1,0 +1,28 @@
+.projectCard .col {
+  margin-bottom: 15px;
+}
+.projectCard {
+  padding: 15px;
+  border-radius: 10px;
+}
+.projectCard .row {
+  text-align: -webkit-center;
+}
+.projectCard .card {
+  transition: all 0.3s ease-in-out;
+}
+.projectCard .card:hover {
+  transform: scale(1.02);
+}
+.projectCard .web__links {
+  display: flex;
+  justify-content: space-evenly;
+}
+.projectCard .web__links > a {
+  padding: 5px 15px;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+.projectCard .web__links > a:hover {
+  background-color: rgb(61, 93, 238) !important;
+}

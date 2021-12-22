@@ -1,0 +1,42 @@
+.aws-btn {
+  --slider-height-percentage: 52%;
+  --slider-transition-duration: 638ms;
+  --organic-arrow-thickness: 13px;
+  --organic-arrow-border-radius: 19px;
+  --organic-arrow-height: 30px;
+  --organic-arrow-color: #bcd926;
+  --control-button-width: 5%;
+  --control-button-height: 25%;
+  --control-button-background: transparent;
+  --control-bullet-color: #ddff2d;
+  --control-bullet-active-color: #bcd926;
+  --loader-bar-color: #851515;
+  --loader-bar-height: 1px;
+}
+.wrap a img {
+  width: 100%;
+}
+.awssld {
+  height: 38vh;
+}
+.awssld__container figure,
+.awssld__content,
+.awssld__box {
+  height: fit-content;
+}
+.awssld__bullets {
+  bottom: -70px;
+}
+@media screen and (max-width: 1024px) {
+  .awssld {
+    height: inherit;
+  }
+  .awssld__bullets {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .awssld__bullets {
+    bottom: -10px;
+  }
+}

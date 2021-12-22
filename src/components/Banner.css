@@ -1,0 +1,86 @@
+.banner {
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.banner__content {
+  display: flex;
+  padding: 10px 0 20px;
+  position: relative;
+}
+.banner__content::before {
+  position: absolute;
+  content: "About me";
+  left: 3%;
+  top: -15px;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.left__side {
+  flex: 0.4;
+}
+.left__side > .image__container {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.left__side > .image__container:hover img {
+  transform: scale(1.08);
+}
+.left__side > .image__container > img {
+  width: 300px;
+  object-fit: contain;
+  height: 300px;
+  box-shadow: 1px 5px 10px 0px #00000030;
+  transition: all 0.2s ease-in-out;
+}
+
+.right__side {
+  flex: 0.6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.right__side p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 85%;
+}
+.right__side p .span-Name {
+  display: block;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+}
+.rightSide__bottom {
+  margin-top: 20px;
+}
+.rightSide__bottom > a {
+  margin-left: 10px;
+  padding: 10px 35px;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+.rightSide__bottom > a:hover {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .banner__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .left__side > .image__container > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    object-fit: contain;
+  }
+}

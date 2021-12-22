@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.app {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.8px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+:root {
+  --blue: #303236;
+  --white: #e1e5f2;
+  --light-text: rgb(45, 45, 48);
+  --light-background: #eddcd2;
+  --dark-text: #fff;
+  --button-hover-back: #5086b9;
+  --button-hover-text: #fff;
+  --boxshadow-light: #dde1ee;
+  --robon-light-background: #ffffffcc;
+  --sections-shadow: #cacacaad;
+
+  --dark-background: #242526;
+  --robon-dark-background: #3b3d42;
+  --boxshadow-dark: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  --boxSahdow-border-dark-hover: rgba(249, 249, 249, 0.8);
+  --dark-border: 1px solid rgba(249, 249, 249, 8%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .duBHuL:hover {
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  transform: scale(1.05);
+  border-color: rgba(249, 249, 249, 0.8);
+  border: 1px solid rgba(249, 249, 249, 0.1);
+} */
+
+body {
+  background: var(--background) !important;
+  color: var(--text) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body.light {
+  --background: var(--white);
+  --text-color: var(--blue);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body.dark {
+  --background: var(--blue);
+  --text-color: var(--white);
 }
 
-.App-link {
-  color: #61dafb;
+/* LIGHT THEME */
+body.light .frontend,
+body.light .backend,
+body.light .devtools,
+body.light .banner,
+body.light .footer__top,
+body.light .footer__bottom,
+body.light .projectCard {
+  background-color: var(--dark-text);
+  box-shadow: 0px 5px 7px 0px var(--boxshadow-light);
+  border: 1px solid var(--dark-text);
+}
+body.light .frontend::before,
+body.light .backend::before,
+body.light .devtools::before,
+body.light .banner__content::before,
+body.light .footer__top::before,
+body.light .footer__bottom::before {
+  background-color: var(--robon-light-background);
+  box-shadow: 1px 2px 20px 1px var(--boxshadow-light);
+  color: var(--blue);
+}
+body.light .skill,
+body.light .projectCard .card {
+  background-color: var(--white);
+  box-shadow: 1px 5px 10px 0px var(--sections-shadow);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body.light .skill > div > p {
+  color: var(--blue);
+}
+body.light nav {
+  background-color: var(--dark-text);
+  box-shadow: 1px 2px 20px 1px var(--boxshadow-light);
+  border: 1px solid var(--dark-text);
+}
+body.light .name > a:hover {
+  color: var(--button-hover-back);
+}
+body.light a {
+  color: #444;
+}
+body.light .nav__buttons > a {
+  background-color: var(--white);
+}
+body.light .nav__buttons > a:hover,
+body.light .projectCard .web__links > a {
+  background-color: var(--button-hover-back);
+  color: var(--dark-text);
+}
+body.light .rightSide__bottom > a:hover {
+  background-color: var(--button-hover-back);
+  color: var(--dark-text);
+}
+body.light .rightSide__bottom > a {
+  background-color: var(--white);
+}
+body.light p {
+  color: #555;
+}
+body.light .marquee-container {
+  background-color: var(--dark-text);
+}
+body.light .overlay {
+  --gradient-color: var(--white), rgba(255, 255, 255, 0);
+}
+
+body.light .footer__bottom .interest {
+  background-color: var(--white);
+  box-shadow: 1px 2px 20px 1px var(--boxshadow-light);
+}
+body.light .nav__social .theSvg {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(100deg) brightness(100%)
+    contrast(100%);
+}
+
+/* DARK THEME */
+
+body.dark .frontend,
+body.dark .backend,
+body.dark .devtools,
+body.dark .banner,
+body.dark .footer__top,
+body.dark .footer__bottom,
+body.dark .projectCard {
+  background-color: var(--dark-background);
+  box-shadow: var(--boxshadow-dark);
+  border: 1px solid var(--dark-background);
+}
+body.dark .frontend::before,
+body.dark .backend::before,
+body.dark .devtools::before,
+body.dark .banner__content::before,
+body.dark .footer__top::before,
+body.dark .footer__bottom::before {
+  background-color: var(--robon-dark-background);
+  box-shadow: var(--boxshadow-dark);
+  color: var(--dark-text);
+}
+body.dark .skill,
+body.dark .projectCard .card {
+  background-color: var(--blue);
+  box-shadow: var(--boxshadow-dark);
+  border: var(--dark-border);
+}
+body.dark .skill:hover,
+body.dark .projectCard .card:hover {
+  border-color: var(--boxSahdow-border-dark-hover);
+}
+body.dark .skill > div > p,
+body.dark .projectCard .card .card-title {
+  color: var(--dark-text);
+}
+body.dark nav {
+  background-color: var(--dark-background);
+  box-shadow: 1px 2px 20px 1px var(--boxshadow-dark);
+  border: 1px solid var(---blue);
+}
+body.dark .name > a:hover {
+  color: var(--button-hover-back);
+}
+body.dark a {
+  color: var(--dark-text);
+}
+body.dark .nav__buttons > a {
+  background-color: var(--blue);
+}
+body.dark .nav__buttons > a:hover {
+  background-color: var(--button-hover-back);
+  color: var(--dark-text);
+}
+body.dark .rightSide__bottom > a:hover {
+  background-color: var(--button-hover-back);
+  color: var(--dark-text);
+}
+body.dark .rightSide__bottom > a {
+  background-color: var(--blue);
+}
+body.dark .projectCard .web__links > a {
+  background-color: var(--dark-background);
+  box-shadow: var(--boxshadow-dark);
+}
+body.dark p {
+  color: #fff;
+}
+body.dark .marquee-container {
+  background-color: var(--dark-background);
+}
+body.dark .overlay {
+  --gradient-color: var(--blue), #30323600 !important;
+}
+
+body.dark .footer__bottom .interest {
+  background-color: var(--blue);
+  box-shadow: var(--boxshadow-dark);
+}
+body.dark .nav__social .theSvg {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(86deg)
+    brightness(150%) contrast(100%);
 }

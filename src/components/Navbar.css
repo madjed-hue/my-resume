@@ -1,0 +1,56 @@
+.navbar {
+  margin-bottom: 20px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 60px;
+  align-items: center;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+
+.content > div {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav__social {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav__buttons > a {
+  padding: 8px 15px;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav__social > a > img {
+  width: 23px;
+  object-fit: contain;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+  .nav__buttons {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 430px) {
+  .content .nav__social {
+    display: none;
+  }
+}
