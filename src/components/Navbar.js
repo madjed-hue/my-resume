@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container">
         <nav className="content">
           <div className="name">
-            <a href="/home">
+            <a href="/">
               <h4>Fateh Beddiaf</h4>
             </a>
           </div>

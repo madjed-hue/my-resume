@@ -16,7 +16,7 @@ const Banner = () => {
             <div className="rightSide__top">
               <p>
                 Hi, my name is <span className="span-Name">Beddiaf Fateh</span>{" "}
-                I a Mechanical Engineer and a self-taught software developer
+                I am a Mechanical Engineer and a self-taught software developer
                 with well developed skills in frontend and backend software
                 development and have concluded various Certifications and
                 Projects in my areas of interest. I'm very passionate in writing
