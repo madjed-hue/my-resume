@@ -77,4 +77,13 @@ button {
   .content .nav__social {
     display: none;
   }
+  .content .nav__buttons a {
+    padding: 4px 8px;
+    font-size: 15px;
+  }
+  .right__side p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
 }

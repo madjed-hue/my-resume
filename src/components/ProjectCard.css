@@ -26,3 +26,11 @@
 .projectCard .web__links > a:hover {
   background-color: rgb(61, 93, 238) !important;
 }
+@media screen and (max-width: 430px) {
+  .projectCard {
+    padding: 10px;
+  }
+  .card {
+    width: 16rem !important;
+  }
+}

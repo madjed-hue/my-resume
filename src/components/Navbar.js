@@ -213,9 +213,13 @@ const Navbar = () => {
                         elementType={Button}
                         key={country_code}
                         onClick={() => i18next.changeLanguage(code)}
+                        disabled={code === currentLanguageCode}
                       >
                         <span
                           className={`flag-icon flag-icon-${country_code} mx-2`}
+                          style={{
+                            opacity: code === currentLanguageCode ? 0.3 : 1,
+                          }}
                         ></span>
                         {name}
                       </Dropdown.Item>

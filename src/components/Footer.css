@@ -82,3 +82,9 @@
     margin-bottom: 15px;
   }
 }
+@media screen and (max-width: 430px) {
+  .overlay::before,
+  .overlay::after {
+    width: 50px;
+  }
+}
