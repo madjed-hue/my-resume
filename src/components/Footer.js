@@ -13,8 +13,10 @@ import gamingIcon from "../assets/Interests/gaming.svg";
 import readingIcon from "../assets/Interests/reading.svg";
 import sportsIcon from "../assets/Interests/sports.svg";
 import travelIcon from "../assets/Interests/travel.svg";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div className="footer">
       <div className="footer__content">
@@ -23,31 +25,31 @@ const Footer = () => {
             <ul>
               <li>
                 <img src={ComunicationIcon} alt="communcation-icon" />
-                <p>Communication</p>
+                <p>{t("communi")}</p>
               </li>
               <li>
                 <img src={descissionIcon} alt="Decision-icon" />
-                <p>Decision Making</p>
+                <p>{t("decision_making")}</p>
               </li>
               <li>
                 <img src={crownIcon} alt="Leadership-icon" />
-                <p>Leadership</p>
+                <p>{t("leader")}</p>
               </li>
               <li>
                 <img src={teamIcon} alt="Teamwork-icon" />
-                <p>Teamwork</p>
+                <p>{t("team")}</p>
               </li>
               <li>
                 <img src={problemIcon} alt="Problem-icon" />
-                <p>Problem Solving</p>
+                <p>{t("prob_solv")}</p>
               </li>
               <li>
                 <img src={timeIcon} alt="Time-icon" />
-                <p>Time Management</p>
+                <p>{t("time_manage")}</p>
               </li>
               <li>
                 <img src={inTimeIcon} alt="Punctuality-icon" />
-                <p>Punctuality</p>
+                <p>{t("ponctule")}</p>
               </li>
             </ul>
           </Marquee>
@@ -58,7 +60,7 @@ const Footer = () => {
               <img src={codingIcon} alt="code-logo" />
             </div>
             <div className="intrest_name">
-              <p>Coding</p>
+              <p>{t("coder")}</p>
             </div>
           </div>
           <div className="interest">
@@ -66,7 +68,7 @@ const Footer = () => {
               <img src={gamingIcon} alt="game-logo" />
             </div>
             <div className="intrest_name">
-              <p>Gaming</p>
+              <p>{t("gamer")}</p>
             </div>
           </div>
           <div className="interest">
@@ -74,7 +76,7 @@ const Footer = () => {
               <img src={readingIcon} alt="read-logo" />
             </div>
             <div className="intrest_name">
-              <p>Reading</p>
+              <p>{t("reader")}</p>
             </div>
           </div>
           <div className="interest">
@@ -82,7 +84,7 @@ const Footer = () => {
               <img src={sportsIcon} alt="sports-logo" />
             </div>
             <div className="intrest_name">
-              <p>Sports</p>
+              <p>{t("sporter")}</p>
             </div>
           </div>
           <div className="interest">
@@ -90,7 +92,7 @@ const Footer = () => {
               <img src={travelIcon} alt="travel-logo" />
             </div>
             <div className="intrest_name">
-              <p>Traveling</p>
+              <p>{t("traveler")}</p>
             </div>
           </div>
         </div>

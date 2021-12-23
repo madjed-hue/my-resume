@@ -41,12 +41,36 @@ button {
   border: none;
   background: transparent;
 }
+.content .phone__nav {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .content {
     width: 100%;
   }
-  .nav__buttons {
+  .content .desk__nav {
+    display: none;
+  }
+  .content .name {
+    display: none;
+  }
+  .content .phone__nav {
+    display: flex;
+  }
+  .content .phone__nav .nav__social {
+    display: flex;
     justify-content: space-between;
+    flex: 0.4;
+  }
+  .content .phone__nav .nav__social img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .right__side p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 430px) {

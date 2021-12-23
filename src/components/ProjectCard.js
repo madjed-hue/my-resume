@@ -13,6 +13,7 @@ import netflixImg from "../assets/Projects/Netflix.png";
 import teslaImg from "../assets/Projects/Tesla.png";
 import Flip from "react-reveal/Flip";
 import "./ProjectCard.css";
+import { useTranslation } from "react-i18next";
 
 const myArray = [
   {
@@ -96,6 +97,7 @@ const myArray = [
 ];
 
 const ProjectCard = () => {
+  const { t } = useTranslation();
   return (
     <div className="projectCard">
       <Row>
@@ -114,14 +116,14 @@ const ProjectCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Live
+                        {t("live_preview")}
                       </a>
                       <a
                         href={arr.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Source Code
+                        {t("source_code")}
                       </a>
                     </div>
                   </Card.Body>
