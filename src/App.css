@@ -146,6 +146,9 @@ body.dark .footer__bottom::before {
   box-shadow: var(--boxshadow-dark);
   color: var(--dark-text);
 }
+body.dark .dropdown-menu.show {
+  background: #000;
+}
 body.dark .skill,
 body.dark .projectCard .card {
   background-color: var(--blue);
